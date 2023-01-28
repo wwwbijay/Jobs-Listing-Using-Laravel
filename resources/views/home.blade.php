@@ -1,3 +1,7 @@
+@extends('layout')
+
+@section('content')
+
 <h1> {{ $heading; }} </h1>
 
 
@@ -9,7 +13,7 @@
 @foreach($jobs as $job)
 
 <h3>
-    <a href="{{ $job['url'] }}">
+    <a href="/jobs/{{ $job['id'] }}">
         {{ $job['jobtitle'] }}
     </a>
 </h3>
@@ -23,3 +27,6 @@
     {{ $job['snippet'] }}
 </p>
 @endforeach
+
+
+@endsection
